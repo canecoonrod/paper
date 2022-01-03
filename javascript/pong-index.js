@@ -82,29 +82,7 @@ function gameProcess() {
     3
   );
   //EVENTS
-  // this is a non-persistant event so it only needs to be checked
-  if (ballHitWall.state === true) {
-    wallSound.play();
-  }
-  if (ballHitPaddle.state) {
-    paddleSound.play();
-  }
-  if (leftScoreHit.state) {
-    scoreSound.play();
-  }
-  if (rightScoreHit.state) {
-    scoreSound.play();
-  }
-  //this is a persistant event so it must be checked and checked if it changed
-  if (rightScoreHigher.state && rightScoreHigher.changed) {
-    adventureMusic.play();
-    villageMusic.stop();
-  }
-  if (leftScoreHigher.state && leftScoreHigher.changed) {
-    villageMusic.play();
-    adventureMusic.stop();
-  }
-}
+ 
 
 ///////////////////////////////////////////////////////////////
 //EVERYTHING BELOW HERE IS IMPORTANT GAME CODE/////////////////
